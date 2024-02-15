@@ -50,6 +50,33 @@ const bsc = {
   },
 } satisfies Chain
 
+export const etherlinkTestnet = {
+  id: 128123,
+  name: 'Etherlink Testnet',
+  nativeCurrency: { name: 'tez', symbol: 'XTZ', decimals: 18 },
+  rpcUrls: {
+    default: { http: ['https://node.ghostnet.etherlink.com'] },
+    public: { http: ['https://node.ghostnet.etherlink.com'] },
+  },
+  blockExplorers: {
+    default: { name: 'Etherscout', url: 'https://explorer.etherlink.com' },
+  },
+  contracts: {
+    ensRegistry: {
+      address: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
+    },
+    ensUniversalResolver: {
+      address: '0xE4Acdd618deED4e6d2f03b9bf62dc6118FC9A4da',
+      blockCreated: 150,
+    },
+    multicall3: {
+      address: '0xca11bde05977b3631167028862be2a173976ca11',
+      blockCreated: 150,
+    },
+  },
+  network: 'etherlinkTestnet',
+} as const satisfies Chain
+
 /**
  * Controls some L2 specific behavior, e.g. slippage tolerance, special UI behavior.
  * The expectation is that all of these networks have immediate transaction confirmation.
@@ -67,12 +94,14 @@ export const L2_CHAIN_IDS: ChainId[] = [
   ChainId.BASE_TESTNET,
   ChainId.OPBNB,
   ChainId.OPBNB_TESTNET,
+  ChainId.ETHERLINK_TESTNET,
 ]
 
 export const CHAINS = [
   bsc,
   mainnet,
   bscTestnet,
+  etherlinkTestnet,
   goerli,
   polygonZkEvm,
   polygonZkEvmTestnet,

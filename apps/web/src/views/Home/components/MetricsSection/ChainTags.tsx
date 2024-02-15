@@ -1,5 +1,4 @@
 import {
-  AptosIcon,
   BaseIcon,
   BinanceChainIcon,
   EthChainIcon,
@@ -93,12 +92,6 @@ const newsItems = [
     background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), #333',
     iconWidth: '26px',
     color: '#F0B90B',
-  },
-  {
-    key: 'Aptos',
-    component: <AptosIcon />,
-    background: '#17BA92',
-    iconWidth: '22px',
   },
   {
     key: 'Ethereum',

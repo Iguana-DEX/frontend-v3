@@ -1,10 +1,10 @@
 /* eslint-disable no-restricted-syntax */
 import { ChainId } from '@pancakeswap/chains'
-import chunk from 'lodash/chunk'
-import BigNumber from 'bignumber.js'
-import { gql, GraphQLClient } from 'graphql-request'
-import dayjs from 'dayjs'
 import { AprMap } from '@pancakeswap/farms'
+import BigNumber from 'bignumber.js'
+import dayjs from 'dayjs'
+import { gql, GraphQLClient } from 'graphql-request'
+import chunk from 'lodash/chunk'
 import _toLower from 'lodash/toLower'
 
 interface BlockResponse {
@@ -23,6 +23,7 @@ const BLOCKS_CLIENT_WITH_CHAIN = {
   [ChainId.ETHEREUM]: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',
   [ChainId.BSC_TESTNET]: '',
   [ChainId.GOERLI]: '',
+  [ChainId.ETHERLINK_TESTNET]: '',
   [ChainId.POLYGON_ZKEVM]: 'https://api.studio.thegraph.com/query/45376/polygon-zkevm-block/version/latest',
   [ChainId.ZKSYNC]: 'https://api.studio.thegraph.com/query/45376/blocks-zksync/version/latest',
   [ChainId.ARBITRUM_ONE]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-arb',
@@ -35,6 +36,7 @@ const INFO_CLIENT_WITH_CHAIN = {
   [ChainId.ETHEREUM]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exhange-eth',
   [ChainId.BSC_TESTNET]: '',
   [ChainId.GOERLI]: '',
+  [ChainId.ETHERLINK_TESTNET]: '',
 }
 
 const blockClientWithChain = (chainId: ChainId) => {

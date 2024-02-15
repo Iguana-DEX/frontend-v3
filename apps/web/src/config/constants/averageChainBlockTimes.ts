@@ -18,4 +18,5 @@ export const AVERAGE_CHAIN_BLOCK_TIMES = {
   [ChainId.LINEA_TESTNET]: 2,
   [ChainId.BASE]: 3,
   [ChainId.BASE_TESTNET]: 3,
+  [ChainId.ETHERLINK_TESTNET]: 1,
 }

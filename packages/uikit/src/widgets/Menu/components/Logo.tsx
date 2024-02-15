@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { styled, keyframes } from "styled-components";
+import { keyframes, styled } from "styled-components";
 import Flex from "../../../components/Box/Flex";
-import { LogoIcon, LogoWithTextIcon } from "../../../components/Svg";
 import { MenuContext } from "../context";
+// import { LogoIcon, LogoWithTextIcon } from "../../../components/Svg";
 
 interface Props {
   href: string;
@@ -46,19 +46,21 @@ const Logo: React.FC<React.PropsWithChildren<Props>> = ({ href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <LogoIcon className="mobile-icon" />
-      <LogoWithTextIcon className="desktop-icon" />
+      <img src="https://i.postimg.cc/9QQRY4px/logo.webp" alt="IguanaDEX logo" className="mobile-icon" />
+      <img src="https://i.postimg.cc/1txksq7M/logo-dark.webp" alt="IguanaDEX logo with text" className="desktop-icon" />
+      {/* <LogoIcon className="mobile-icon" />
+      <LogoWithTextIcon className="desktop-icon" /> */}
     </>
   );
 
   return (
     <Flex alignItems="center">
       {isAbsoluteUrl ? (
-        <StyledLink as="a" href={href} aria-label="Pancake home page">
+        <StyledLink as="a" href={href} aria-label="IguanaDEX home page">
           {innerLogo}
         </StyledLink>
       ) : (
-        <StyledLink href={href} as={linkComponent} aria-label="Pancake home page">
+        <StyledLink href={href} as={linkComponent} aria-label="IguanaDEX home page">
           {innerLogo}
         </StyledLink>
       )}

@@ -1,11 +1,11 @@
 import { useIsMounted } from "@pancakeswap/hooks";
 import throttle from "lodash/throttle";
-import React, { useEffect, useRef, useState, useMemo } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { styled } from "styled-components";
+import { AtomBox } from "../../components/AtomBox";
 import BottomNav from "../../components/BottomNav";
 import { Box } from "../../components/Box";
 import Flex from "../../components/Box/Flex";
-import { AtomBox } from "../../components/AtomBox";
 import CakePrice from "../../components/CakePrice/CakePrice";
 import Footer from "../../components/Footer";
 import LangSelector from "../../components/LangSelector/LangSelector";
@@ -78,15 +78,15 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
   toggleTheme,
   currentLang,
   setLang,
-  cakePriceUsd,
+  ignPriceUsd: cakePriceUsd,
   links,
   subLinks,
   footerLinks,
   activeItem,
   activeSubItem,
   langs,
-  buyCakeLabel,
-  buyCakeLink,
+  buyIgnLabel: buyCakeLabel,
+  buyIgnLink: buyCakeLink,
   children,
   chainId,
 }) => {

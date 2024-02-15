@@ -166,7 +166,7 @@ const VeCakeBanner = () => {
           <Flex alignItems="center" mb="8px" style={{ gap: isMobile ? 8 : 10 }}>
             <Image
               src={vecakeTitle}
-              alt="pancakeSwapLogo"
+              alt="iguanaDexLogo"
               width={isMobile ? 100 : 132}
               height={isMobile ? 15 : 22}
               unoptimized

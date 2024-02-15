@@ -1,5 +1,5 @@
-import { ElementType, ReactElement, ReactNode } from "react";
 import type { Language } from "@pancakeswap/localization";
+import { ElementType, ReactElement, ReactNode } from "react";
 import { FooterLinkType } from "../../components/Footer/types";
 import { MenuItemsType } from "../../components/MenuItems/types";
 import { SubMenuItemsType } from "../../components/SubMenuItems/types";
@@ -21,10 +21,10 @@ export interface NavProps {
   activeSubItem?: string;
   isDark: boolean;
   toggleTheme: (isDark: boolean) => void;
-  cakePriceUsd?: number;
+  ignPriceUsd?: number;
   currentLang: string;
-  buyCakeLabel: string;
-  buyCakeLink: string;
+  buyIgnLabel: string;
+  buyIgnLink: string;
   langs: Language[];
   chainId: number;
   setLang: (lang: Language) => void;

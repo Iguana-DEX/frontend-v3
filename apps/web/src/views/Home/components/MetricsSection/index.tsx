@@ -38,16 +38,6 @@ const EthBallRocket = styled.div`
   }
 `
 
-const AptosBallRocket = styled.div`
-  position: absolute;
-  top: 0px;
-  right: 98px;
-  ${({ theme }) => theme.mediaQueries.xxl} {
-    top: 72px;
-    right: 119px;
-  }
-`
-
 const Stats = () => {
   const { t } = useTranslation()
   const { data: tvl = 0 } = useQuery<number>({
@@ -116,15 +106,6 @@ const Stats = () => {
             unoptimized
           />
         </EthBallRocket>
-        <AptosBallRocket>
-          <Image
-            src={`${ASSET_CDN}/web/landing/aptos-ball-rocket.png`}
-            alt="aptosBallRocket"
-            width={isXxl ? 84 : 53}
-            height={isXxl ? 101 : 64}
-            unoptimized
-          />
-        </AptosBallRocket>
       </ImageLayer>
     </Flex>
   )

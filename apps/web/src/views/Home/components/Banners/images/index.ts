@@ -3,8 +3,6 @@ import apolloXCampaignBgMobile from './ApolloXCampaignBgMobile.png'
 import apolloXCampaignBunny from './ApolloXCampaignBunny.png'
 import apolloXCampaignBunnyMobile from './ApolloXCampaignBunnyMobile.png'
 import apolloXCampaignTitle from './ApolloXCampaignTitle.png'
-import Aptos from './Aptos.png'
-import AptosXPancakeSwap from './AptosXPancakeSwap.png'
 import ETHBunny from './ETHBunny.png'
 import IFOImage from './IFO.png'
 import IFOMobileImage from './IFOMobile.png'
@@ -85,8 +83,6 @@ import zkSyncBgMobile from './zkSyncBgMobile.png'
 import zkSyncBunny from './zkSyncBunny.png'
 
 export {
-  Aptos,
-  AptosXPancakeSwap,
   ETHBunny,
   ETHXPancakeSwap,
   IFOImage,

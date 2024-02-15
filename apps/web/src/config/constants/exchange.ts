@@ -1,33 +1,34 @@
-import { Percent, Token, WNATIVE } from '@pancakeswap/sdk'
 import { ChainId } from '@pancakeswap/chains'
+import { Percent, Token, WNATIVE } from '@pancakeswap/sdk'
 import {
-  bscTokens,
-  bscTestnetTokens,
+  BUSD,
   USDC,
   USDT,
-  BUSD,
   WBTC_ETH,
-  arbitrumTokens,
-  polygonZkEvmTokens,
-  polygonZkEvmTestnetTokens,
-  zksyncTokens,
-  zkSyncTestnetTokens,
-  lineaTestnetTokens,
   arbitrumGoerliTokens,
-  opBnbTokens,
-  opBnbTestnetTokens,
-  baseTokens,
+  arbitrumTokens,
   baseTestnetTokens,
-  scrollSepoliaTokens,
+  baseTokens,
+  bscTestnetTokens,
+  bscTokens,
+  etherlinkTestnetTokens,
+  lineaTestnetTokens,
   lineaTokens,
+  opBnbTestnetTokens,
+  opBnbTokens,
+  polygonZkEvmTestnetTokens,
+  polygonZkEvmTokens,
+  scrollSepoliaTokens,
+  zkSyncTestnetTokens,
+  zksyncTokens,
 } from '@pancakeswap/tokens'
 import { ChainTokenList } from './types'
 
 export {
   ADDITIONAL_BASES,
-  V2_ROUTER_ADDRESS,
   BASES_TO_CHECK_TRADES_AGAINST,
   CUSTOM_BASES,
+  V2_ROUTER_ADDRESS,
 } from '@pancakeswap/smart-router/evm'
 
 export const CHAIN_REFRESH_TIME = {
@@ -48,6 +49,7 @@ export const CHAIN_REFRESH_TIME = {
   [ChainId.BASE]: 6_000,
   [ChainId.BASE_TESTNET]: 6_000,
   [ChainId.SCROLL_SEPOLIA]: 6_000,
+  [ChainId.ETHERLINK_TESTNET]: 6_000,
 } as const satisfies Record<ChainId, number>
 
 // used for display in the default list when adding liquidity
@@ -74,6 +76,7 @@ export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.BASE]: [baseTokens.usdc, baseTokens.weth],
   [ChainId.BASE_TESTNET]: [baseTestnetTokens.usdc, baseTestnetTokens.weth],
   [ChainId.SCROLL_SEPOLIA]: [scrollSepoliaTokens.usdc, scrollSepoliaTokens.weth],
+  [ChainId.ETHERLINK_TESTNET]: [etherlinkTestnetTokens.usdt],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
@@ -95,6 +98,7 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.BASE]: [baseTokens.usdc, baseTokens.weth],
   [ChainId.BASE_TESTNET]: [baseTestnetTokens.usdc, baseTestnetTokens.weth],
   [ChainId.SCROLL_SEPOLIA]: [scrollSepoliaTokens.usdc, scrollSepoliaTokens.weth],
+  [ChainId.ETHERLINK_TESTNET]: [etherlinkTestnetTokens.usdt],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
@@ -123,6 +127,7 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
   [ChainId.BASE]: [[baseTokens.usdc, baseTokens.weth]],
   [ChainId.BASE_TESTNET]: [[baseTestnetTokens.usdc, baseTestnetTokens.weth]],
   [ChainId.SCROLL_SEPOLIA]: [[scrollSepoliaTokens.usdc, scrollSepoliaTokens.weth]],
+  [ChainId.ETHERLINK_TESTNET]: [[etherlinkTestnetTokens.usdt, etherlinkTestnetTokens.usdc]],
 }
 
 export const BIG_INT_ZERO = 0n
@@ -140,7 +145,7 @@ export const PRICE_IMPACT_WITHOUT_FEE_CONFIRM_MIN: Percent = new Percent(1000n, 
 // for non expert mode disable swaps above this
 export const BLOCKED_PRICE_IMPACT_NON_EXPERT: Percent = new Percent(1500n, BIPS_BASE) // 15%
 
-// used to ensure the user doesn't send so much BNB so they end up with <.01
+// used to ensure the user doesn't send so much BNB as to end up with less than 0.01 BNB
 export const MIN_BNB: bigint = BIG_INT_TEN ** 15n // .001 BNB
 export const BETTER_TRADE_LESS_HOPS_THRESHOLD = new Percent(50n, BIPS_BASE)
 
