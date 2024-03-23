@@ -1,7 +1,7 @@
-import { ReactNode } from 'react'
+import { ChainId } from '@pancakeswap/sdk'
 import { Box, ICakeIcon, LogoRoundIcon } from '@pancakeswap/uikit'
 import { ChainLogo } from '@pancakeswap/widgets-internal'
-import { ChainId } from '@pancakeswap/sdk'
+import { ReactNode } from 'react'
 import styled from 'styled-components'
 import { SpaceProps } from 'styled-system'
 

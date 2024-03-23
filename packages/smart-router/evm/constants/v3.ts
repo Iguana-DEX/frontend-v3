@@ -4,6 +4,17 @@ import { Address } from 'viem'
 // = 1 << 23 or 100000000000000000000000
 export const V2_FEE_PATH_PLACEHOLDER = 8388608
 
+export const isV2Supported = (chainId: number | undefined): chainId is V2SupportedChainId => {
+  if (!chainId) {
+    return false
+  }
+  return !V2_NOT_SUPPORTED_CHAIN_IDS.includes(chainId)
+}
+
+export const V2_NOT_SUPPORTED_CHAIN_IDS = [ChainId.ETHERLINK_TESTNET] as const
+
+export type V2SupportedChainId = (typeof V2_NOT_SUPPORTED_CHAIN_IDS)[number]
+
 export const MSG_SENDER = '0x0000000000000000000000000000000000000001'
 export const ADDRESS_THIS = '0x0000000000000000000000000000000000000002'
 
@@ -25,6 +36,7 @@ export const MIXED_ROUTE_QUOTER_ADDRESSES = {
   [ChainId.BASE]: '0x4c650FB471fe4e0f476fD3437C3411B1122c4e3B',
   [ChainId.BASE_TESTNET]: '0x9d4277f1D41CCB30C0e91f7d1bBA2A739E19032C',
   [ChainId.SCROLL_SEPOLIA]: '0x9d4277f1D41CCB30C0e91f7d1bBA2A739E19032C',
+  [ChainId.ETHERLINK_TESTNET]: '0x0aD681b67ca1D530bAf9B7e1f2F58f40138b77ae',
 } as const satisfies Record<ChainId, Address>
 
 export const V3_QUOTER_ADDRESSES = {
@@ -45,4 +57,5 @@ export const V3_QUOTER_ADDRESSES = {
   [ChainId.BASE]: '0xB048Bbc1Ee6b733FFfCFb9e9CeF7375518e25997',
   [ChainId.BASE_TESTNET]: '0x6cc56b20bf8C4FfD58050D15AbA2978A745CC691',
   [ChainId.SCROLL_SEPOLIA]: '0x6cc56b20bf8C4FfD58050D15AbA2978A745CC691',
+  [ChainId.ETHERLINK_TESTNET]: '0x3531ACe66aDb3374974C5ae9eFC51F03f28C834d',
 } as const satisfies Record<ChainId, Address>

@@ -73,7 +73,7 @@ export const infoStableSwapClients = {
 export const infoServerClient = new GraphQLClient(INFO_CLIENT, {
   timeout: 5000,
   headers: {
-    origin: 'https://pancakeswap.finance',
+    origin: 'https://iguanadex.com',
   },
 })
 

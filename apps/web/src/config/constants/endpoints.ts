@@ -31,7 +31,6 @@ export const BLOCKS_CLIENT_ZKSYNC = BLOCKS_SUBGRAPHS[ChainId.ZKSYNC]
 export const BLOCKS_CLIENT_LINEA = BLOCKS_SUBGRAPHS[ChainId.LINEA]
 export const BLOCKS_CLIENT_BASE = BLOCKS_SUBGRAPHS[ChainId.BASE]
 export const BLOCKS_CLIENT_OPBNB = BLOCKS_SUBGRAPHS[ChainId.OPBNB]
-export const BLOCKS_CLIENT_ETHERLINK_TESTNET = BLOCKS_SUBGRAPHS[ChainId.ETHERLINK_TESTNET]
 
 export const GRAPH_API_NFTMARKET = 'https://api.thegraph.com/subgraphs/name/pancakeswap/nft-market'
 export const GRAPH_HEALTH = 'https://api.thegraph.com/index-node/graphql'
@@ -50,6 +49,7 @@ export const INFO_CLIENT_WITH_CHAIN = V2_SUBGRAPHS
 export const BLOCKS_CLIENT_WITH_CHAIN = BLOCKS_SUBGRAPHS
 
 export const ASSET_CDN = 'https://assets.pancakeswap.finance'
+// export const ASSET_CDN = 'https://raw.githubusercontent.com/Iguana-DEX/assets/main'
 
 export const V3_SUBGRAPH_URLS = V3_SUBGRAPHS
 

@@ -1,6 +1,6 @@
-import { styled } from 'styled-components'
-import { Flex, TwitterIcon, TelegramIcon, RedditIcon, Link, DiscordIcon } from '@pancakeswap/uikit'
+import { DiscordIcon, Flex, Link, TwitterIcon } from '@pancakeswap/uikit'
 import { useRouter } from 'next/router'
+import { styled } from 'styled-components'
 
 const StyledLink = styled(Link)`
   &:hover {
@@ -42,13 +42,7 @@ const SocialIcon = () => {
       <StyledLink external href={`https://twitter.com/share?url=${BLOG_URL}${router.asPath}`}>
         <TwitterIcon width={40} />
       </StyledLink>
-      <StyledLink external href={`https://telegram.me/share/url?url=${BLOG_URL}${router.asPath}`}>
-        <TelegramIcon width={40} />
-      </StyledLink>
-      <StyledLink external href={`https://reddit.com/submit?url=${BLOG_URL}${router.asPath}`}>
-        <RedditIcon width={40} />
-      </StyledLink>
-      <StyledLink external href="https://discord.com/invite/pancakeswap">
+      <StyledLink external href="https://discord.gg/yq5bUaT7Cm">
         <DiscordIcon width={40} />
       </StyledLink>
     </StyledSocialIcon>

@@ -1,5 +1,5 @@
-import { Percent } from '@pancakeswap/swap-sdk-core'
 import { ChainId } from '@pancakeswap/chains'
+import { Percent } from '@pancakeswap/swap-sdk-core'
 import { Address, Hash } from 'viem'
 import { ERC20Token } from './entities/token'
 
@@ -190,6 +190,14 @@ export const WETH9 = {
     'Wrapped Ether',
     'https://weth.io'
   ),
+  [ChainId.ETHERLINK_TESTNET]: new ERC20Token(
+    ChainId.ETHERLINK_TESTNET,
+    '0x8DEF68408Bc96553003094180E5C90d9fe5b88C1',
+    18,
+    'ETH',
+    'ETH',
+    'https://ethereum.org'
+  ),
 }
 
 export const WBNB = {
@@ -235,6 +243,17 @@ export const WBNB = {
   ),
 }
 
+export const WXTZ = {
+  [ChainId.ETHERLINK_TESTNET]: new ERC20Token(
+    ChainId.ETHERLINK_TESTNET,
+    '0xB1Ea698633d57705e93b0E40c1077d46CD6A51d8',
+    18,
+    'WXTZ',
+    'Wrapped XTZ',
+    'https://etherlink.com'
+  ),
+}
+
 export const WNATIVE = {
   [ChainId.ETHEREUM]: WETH9[ChainId.ETHEREUM],
   [ChainId.GOERLI]: WETH9[ChainId.GOERLI],
@@ -253,6 +272,7 @@ export const WNATIVE = {
   [ChainId.BASE]: WETH9[ChainId.BASE],
   [ChainId.BASE_TESTNET]: WETH9[ChainId.BASE_TESTNET],
   [ChainId.SCROLL_SEPOLIA]: WETH9[ChainId.SCROLL_SEPOLIA],
+  [ChainId.ETHERLINK_TESTNET]: WXTZ[ChainId.ETHERLINK_TESTNET],
 } satisfies Record<ChainId, ERC20Token>
 
 const ETHER = { name: 'Ether', symbol: 'ETH', decimals: 18 } as const
@@ -292,6 +312,11 @@ export const NATIVE = {
   [ChainId.BASE]: ETHER,
   [ChainId.BASE_TESTNET]: ETHER,
   [ChainId.SCROLL_SEPOLIA]: ETHER,
+  [ChainId.ETHERLINK_TESTNET]: {
+    name: 'tez',
+    symbol: 'tXTZ',
+    decimals: 18,
+  },
 } satisfies Record<
   ChainId,
   {

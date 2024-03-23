@@ -6,6 +6,7 @@ import {
   bscTestnetTokens,
   bscTokens,
   ethereumTokens,
+  etherlinkTestnetTokens,
   goerliTestnetTokens,
   lineaTokens,
   opBnbTokens,
@@ -82,4 +83,9 @@ export const DEFAULT_COMMON_PRICE: Record<FarmV3SupportedChainId, CommonPrice> =
   [ChainId.BASE]: {},
   [ChainId.OPBNB_TESTNET]: {},
   [ChainId.OPBNB]: {},
+  [ChainId.ETHERLINK_TESTNET]: {
+    [etherlinkTestnetTokens.usdc.address]: '1',
+    [etherlinkTestnetTokens.eusd.address]: '1',
+    [etherlinkTestnetTokens.usdt.address]: '1',
+  },
 }

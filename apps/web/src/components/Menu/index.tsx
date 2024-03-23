@@ -1,8 +1,8 @@
 import { languageList, useTranslation } from '@pancakeswap/localization'
 import { Menu as UikitMenu, footerLinks, useModal } from '@pancakeswap/uikit'
 import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
-import { usePhishingBanner } from '@pancakeswap/utils/user'
 import { NextLinkFromReactRouter } from '@pancakeswap/widgets-internal'
+// import { usePhishingBanner } from '@pancakeswap/utils/user'
 import USCitizenConfirmModal from 'components/Modal/USCitizenConfirmModal'
 import { NetworkSwitcher } from 'components/NetworkSwitcher'
 import PhishingWarningBanner from 'components/PhishingWarningBanner'
@@ -39,7 +39,7 @@ const Menu = (props) => {
     false,
     'usCitizenConfirmModal',
   )
-  const [showPhishingWarningBanner] = usePhishingBanner()
+  const showPhishingWarningBanner = false
 
   const menuItems = useMenuItems(onUSCitizenModalPresent)
 
@@ -84,7 +84,7 @@ const Menu = (props) => {
         activeItem={activeMenuItem?.href}
         activeSubItem={activeSubMenuItem?.href}
         buyIgnLabel={t('Buy IGN')}
-        buyIgnLink="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
+        buyIgnLink="https://iguanadex.com/swap?outputCurrency=0xBeEfb119631691a1e0D9378fA7864fC6E67A72Ad&chainId=128123"
         {...props}
       />
     </>

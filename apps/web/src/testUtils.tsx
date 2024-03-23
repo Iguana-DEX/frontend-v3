@@ -57,7 +57,7 @@ export function renderWithProvider(
 }
 
 const HydrateAtoms = ({ initialValues, children }) => {
-  // initialising on state with prop on render here
+  // initializing on state with prop on render here
   useHydrateAtoms(initialValues)
   return children
 }

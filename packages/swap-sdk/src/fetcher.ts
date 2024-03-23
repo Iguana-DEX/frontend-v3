@@ -1,20 +1,42 @@
-import { createPublicClient, PublicClient, http, getContract, Address } from 'viem'
-import { bsc, bscTestnet, mainnet, goerli } from 'viem/chains'
-import { CurrencyAmount, Token } from '@pancakeswap/swap-sdk-core'
 import { ChainId } from '@pancakeswap/chains'
+import { CurrencyAmount, Token } from '@pancakeswap/swap-sdk-core'
 import invariant from 'tiny-invariant'
-import { Pair } from './entities/pair'
+import { Address, PublicClient, createPublicClient, getContract, http } from 'viem'
+import { bsc, bscTestnet, goerli, mainnet } from 'viem/chains'
 import { erc20ABI } from './abis/ERC20'
 import { pancakePairV2ABI } from './abis/IPancakePair'
+import { Pair } from './entities/pair'
 
 let TOKEN_DECIMALS_CACHE: { [chainId: number]: { [address: string]: number } } = {
   [ChainId.BSC]: {},
 }
 
+const etherlinkTestnet = {
+  id: 128_123,
+  name: 'Etherlink Testnet',
+  network: 'etherlinkTestnet',
+  nativeCurrency: { name: 'tez', symbol: 'XTZ', decimals: 18 },
+  rpcUrls: {
+    default: { http: ['https://node.ghostnet.etherlink.com'] },
+    public: { http: ['https://node.ghostnet.etherlink.com'] },
+  },
+  blockExplorers: {
+    default: { name: 'Etherscout', url: 'https://testnet-explorer.etherlink.com' },
+  },
+  contracts: {
+    multicall3: {
+      address: '0xcA11bde05977b3631167028862bE2a173976CA11',
+      blockCreated: 42,
+    },
+  },
+  testnet: true,
+} as const
+
 const ethClient = createPublicClient({ chain: mainnet, transport: http() })
 const bscClient = createPublicClient({ chain: bsc, transport: http() })
 const bscTestnetClient = createPublicClient({ chain: bscTestnet, transport: http() })
 const goerliClient = createPublicClient({ chain: goerli, transport: http() })
+const etherlinkTestnetClient = createPublicClient({ chain: etherlinkTestnet, transport: http() })
 
 const getDefaultClient = (chainId: ChainId): PublicClient => {
   switch (chainId) {
@@ -26,6 +48,8 @@ const getDefaultClient = (chainId: ChainId): PublicClient => {
       return bscTestnetClient
     case ChainId.GOERLI:
       return goerliClient
+    case ChainId.ETHERLINK_TESTNET:
+      return etherlinkTestnetClient
     default:
       return bscClient
   }

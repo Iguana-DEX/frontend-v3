@@ -1,4 +1,4 @@
-import { styled, DefaultTheme } from "styled-components";
+import { DefaultTheme, styled } from "styled-components";
 import { Colors } from "../../theme";
 import { Text } from "../Text";
 import { StyledDropdownMenuItemProps } from "./types";
@@ -9,7 +9,7 @@ const getTextColor = ({
   theme,
 }: StyledDropdownMenuItemProps & { theme: DefaultTheme; $isActive: boolean }) => {
   if (disabled) return theme.colors.textDisabled;
-  if ($isActive) return theme.colors.secondary;
+  if ($isActive) return theme.colors.primary;
 
   return theme.colors.textSubtle;
 };
@@ -39,6 +39,7 @@ export const DropdownMenuItem = styled("button").withConfig({
 
   &:hover:not(:disabled) {
     background-color: ${({ theme }) => theme.colors.tertiary};
+    color: ${({ theme, $isActive }) => ($isActive ? theme.colors.primaryBright : theme.colors.secondary)};
   }
 
   &:active:not(:disabled) {

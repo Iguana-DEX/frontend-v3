@@ -152,7 +152,8 @@ export const getCommonTokenPricesByLlma = createCommonTokenPriceProvider<BySubgr
 
 export const getCommonTokenPricesByWalletApi = createCommonTokenPriceProvider<BySubgraphEssentials>(
   createGetTokenPriceFromLlmaWithCache({
-    endpoint: 'https://alpha.wallet-api.pancakeswap.com/v0/prices',
+    // endpoint: 'https://alpha.wallet-api.pancakeswap.com/v0/prices',
+    endpoint: 'https://api.binance.com/api/v3/ticker/price',
   }),
 )
 

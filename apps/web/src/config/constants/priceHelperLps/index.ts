@@ -1,19 +1,20 @@
-import { getFarmsPriceHelperLpFiles } from '@pancakeswap/farms/constants/priceHelperLps/getFarmsPriceHelperLpFiles'
 import { ChainId } from '@pancakeswap/chains'
+import { getFarmsPriceHelperLpFiles } from '@pancakeswap/farms/constants/priceHelperLps/getFarmsPriceHelperLpFiles'
 import PoolsEthereumPriceHelper from './pools/1'
-import PoolsGoerliPriceHelper from './pools/5'
-import PoolsBscPriceHelper from './pools/56'
-import PoolsBscTestnetPriceHelper from './pools/97'
+import PoolsPolygonZkEvmPriceHelper from './pools/1101'
+import PoolsEtherlinkTestnetPriceHelper from './pools/128123'
+import PoolsPolygonZkEvmTestnetPriceHelper from './pools/1442'
+import PoolsZkSyncTestnetPriceHelper from './pools/280'
+import PoolsZkSyncPriceHelper from './pools/324'
 import PoolsArbPriceHelper from './pools/42161'
 import PoolsArbTestnetPriceHelper from './pools/421613'
-import PoolsZkSyncPriceHelper from './pools/324'
-import PoolsZkSyncTestnetPriceHelper from './pools/280'
+import PoolsGoerliPriceHelper from './pools/5'
+import PoolsBscPriceHelper from './pools/56'
+import PoolsLineaTestnetPriceHelper from './pools/59140'
+import PoolsLineaPriceHelper from './pools/59144'
 import PoolsBasePriceHelper from './pools/8453'
 import PoolsBaseTestnetPriceHelper from './pools/84531'
-import PoolsLineaPriceHelper from './pools/59144'
-import PoolsLineaTestnetPriceHelper from './pools/59140'
-import PoolsPolygonZkEvmPriceHelper from './pools/1101'
-import PoolsPolygonZkEvmTestnetPriceHelper from './pools/1442'
+import PoolsBscTestnetPriceHelper from './pools/97'
 
 export { getFarmsPriceHelperLpFiles }
 
@@ -47,6 +48,8 @@ export const getPoolsPriceHelperLpFiles = (chainId: ChainId) => {
       return PoolsPolygonZkEvmPriceHelper
     case ChainId.POLYGON_ZKEVM_TESTNET:
       return PoolsPolygonZkEvmTestnetPriceHelper
+    case ChainId.ETHERLINK_TESTNET:
+      return PoolsEtherlinkTestnetPriceHelper
     default:
       return []
   }

@@ -1,6 +1,6 @@
 import { ChainId } from '@pancakeswap/chains'
 
-import { ChainMap, BatchMulticallConfigs } from '../types'
+import { BatchMulticallConfigs, ChainMap } from '../types'
 
 const DEFAULT: BatchMulticallConfigs = {
   defaultConfig: {
@@ -68,4 +68,15 @@ export const BATCH_MULTICALL_CONFIGS: ChainMap<BatchMulticallConfigs> = {
   [ChainId.OPBNB]: DEFAULT,
   [ChainId.OPBNB_TESTNET]: DEFAULT,
   [ChainId.SCROLL_SEPOLIA]: DEFAULT,
+  [ChainId.ETHERLINK_TESTNET]: {
+    defaultConfig: {
+      gasLimitPerCall: 1_000_000,
+    },
+    gasErrorFailureOverride: {
+      gasLimitPerCall: 2_000_000,
+    },
+    successRateFailureOverrides: {
+      gasLimitPerCall: 3_000_000,
+    },
+  },
 }

@@ -1,11 +1,11 @@
 import { Flex, PageSection } from '@pancakeswap/uikit'
-import Image from 'next/image'
 import useTheme from 'hooks/useTheme'
 import { StaticImageData } from 'next/dist/client/legacy/image'
-import { DARKBG } from './pageSectionStyles'
+import Image from 'next/image'
 import BattleCta from './components/BattleCta'
-import { CompetitionProps } from './types'
+import { DARKBG } from './pageSectionStyles'
 import { BottomBunnyWrapper } from './styles'
+import { CompetitionProps } from './types'
 
 const Footer: React.FC<
   React.PropsWithChildren<CompetitionProps & { shouldHideCta: boolean; image: StaticImageData }>

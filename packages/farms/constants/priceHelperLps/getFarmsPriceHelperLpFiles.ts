@@ -1,11 +1,12 @@
 import { ChainId } from '@pancakeswap/chains'
-import FarmsBscPriceHelper from './56'
-import FarmsBscTestnetPriceHelper from './97'
 import FarmsEthereumPriceHelper from './1'
-import FarmsGoerliPriceHelper from './5'
+import FarmsEtherlinkTestnetHelper from './128123'
 import FarmsArbitrumHelper from './42161'
+import FarmsGoerliPriceHelper from './5'
+import FarmsBscPriceHelper from './56'
 import FarmsLineaHelper from './59144'
 import FarmsBaseHelper from './8453'
+import FarmsBscTestnetPriceHelper from './97'
 
 export const getFarmsPriceHelperLpFiles = (chainId: ChainId) => {
   switch (chainId) {
@@ -23,6 +24,8 @@ export const getFarmsPriceHelperLpFiles = (chainId: ChainId) => {
       return FarmsLineaHelper
     case ChainId.BASE:
       return FarmsBaseHelper
+    case ChainId.ETHERLINK_TESTNET:
+      return FarmsEtherlinkTestnetHelper
     default:
       return []
   }

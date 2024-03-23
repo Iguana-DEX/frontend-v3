@@ -1,8 +1,8 @@
+import { useTheme } from "@pancakeswap/hooks";
 import React, { useContext } from "react";
 import { keyframes, styled } from "styled-components";
 import Flex from "../../../components/Box/Flex";
 import { MenuContext } from "../context";
-// import { LogoIcon, LogoWithTextIcon } from "../../../components/Svg";
 
 interface Props {
   href: string;
@@ -44,14 +44,26 @@ const StyledLink = styled("a")`
 const Logo: React.FC<React.PropsWithChildren<Props>> = ({ href }) => {
   const { linkComponent } = useContext(MenuContext);
   const isAbsoluteUrl = href.startsWith("http");
-  const innerLogo = (
-    <>
-      <img src="https://i.postimg.cc/9QQRY4px/logo.webp" alt="IguanaDEX logo" className="mobile-icon" />
-      <img src="https://i.postimg.cc/1txksq7M/logo-dark.webp" alt="IguanaDEX logo with text" className="desktop-icon" />
-      {/* <LogoIcon className="mobile-icon" />
-      <LogoWithTextIcon className="desktop-icon" /> */}
-    </>
-  );
+  const { isDark } = useTheme();
+  const light = "https://raw.githubusercontent.com/Iguana-DEX/assets/main/iguana_brand_assets/logo-light.webp";
+  const dark = "https://raw.githubusercontent.com/Iguana-DEX/assets/main/iguana_brand_assets/logo-dark.webp";
+  let innerLogo;
+
+  if (isDark) {
+    innerLogo = (
+      <>
+        <img src="https://i.postimg.cc/9QQRY4px/logo.webp" alt="IguanaDEX logo" className="mobile-icon" />
+        <img src={dark} alt="IguanaDEX logo with text" className="desktop-icon" />
+      </>
+    );
+  } else {
+    innerLogo = (
+      <>
+        <img src="https://i.postimg.cc/9QQRY4px/logo.webp" alt="IguanaDEX logo" className="mobile-icon" />
+        <img src={light} alt="IguanaDEX logo with text" className="desktop-icon" />
+      </>
+    );
+  }
 
   return (
     <Flex alignItems="center">

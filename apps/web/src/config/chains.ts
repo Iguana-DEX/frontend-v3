@@ -59,7 +59,7 @@ export const etherlinkTestnet = {
     public: { http: ['https://node.ghostnet.etherlink.com'] },
   },
   blockExplorers: {
-    default: { name: 'Etherscout', url: 'https://explorer.etherlink.com' },
+    default: { name: 'Etherscout', url: 'https://testnet-explorer.etherlink.com' },
   },
   contracts: {
     ensRegistry: {
@@ -70,7 +70,7 @@ export const etherlinkTestnet = {
       blockCreated: 150,
     },
     multicall3: {
-      address: '0xca11bde05977b3631167028862be2a173976ca11',
+      address: '0xcA11bde05977b3631167028862bE2a173976CA11',
       blockCreated: 150,
     },
   },

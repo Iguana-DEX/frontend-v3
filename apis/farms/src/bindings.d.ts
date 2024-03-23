@@ -12,6 +12,8 @@ declare global {
   const ZKSYNC_NODE: string
   const ARBITRUM_ONE_NODE: string
   const LINEA_NODE: string
+  const ETHERLINK_TESTNET_NODE: string
+  const ETHERLINK_NODE: string
   const BASE_NODE: string
   const OPBNB_NODE: string
   const OPBNB_TESTNET_NODE: string

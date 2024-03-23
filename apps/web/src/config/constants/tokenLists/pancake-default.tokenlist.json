@@ -473,6 +473,38 @@
       "chainId": 204,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/symbol/cake.png"
+    },
+    {
+      "name": "Iguana Token",
+      "symbol": "IGN",
+      "address": "0xBeEfb119631691a1e0D9378fA7864fC6E67A72Ad",
+      "chainId": 128123,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/cake.png"
+    },
+    {
+      "name": "Iguana Token",
+      "symbol": "IGN",
+      "address": "0x6333657f8fd60593282213664ed25fFb88aB5A59",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/cake.png"
+    },
+    {
+      "name": "Wrapped XTZ",
+      "symbol": "WXTZ",
+      "address": "0xB1Ea698633d57705e93b0E40c1077d46CD6A51d8",
+      "chainId": 128123,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/cake.png"
+    },
+    {
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "address": "0xD21B917D2f4a4a8E3D12892160BFFd8f4cd72d4F",
+      "chainId": 128123,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/cake.png"
     }
   ]
 }

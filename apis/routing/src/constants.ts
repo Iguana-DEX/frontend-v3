@@ -14,6 +14,7 @@ export const SUPPORTED_CHAINS = [
   ChainId.BASE_TESTNET,
   ChainId.LINEA,
   ChainId.OPBNB,
+  ChainId.ETHERLINK_TESTNET,
 ] as const
 
 export type SupportedChainId = (typeof SUPPORTED_CHAINS)[number]

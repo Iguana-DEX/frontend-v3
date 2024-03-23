@@ -164,6 +164,12 @@ export const NetworkSwitcher = () => {
     return null
   }
 
+  let avatarSrc = `${ASSET_CDN}/web/chains/${chainId}.png`
+
+  if (chainId === ChainId.ETHERLINK_TESTNET || chainId === ChainId.ETHERLINK_TESTNET) {
+    avatarSrc = 'https://raw.githubusercontent.com/Iguana-DEX/assets/main/chains/etherlink.svg'
+  }
+
   return (
     <Box ref={cannotChangeNetwork ? targetRef : null} height="100%">
       {cannotChangeNetwork && tooltipVisible && tooltip}
@@ -171,7 +177,7 @@ export const NetworkSwitcher = () => {
         mr="8px"
         placement="bottom"
         variant={isLoading ? 'pending' : isWrongNetwork ? 'danger' : 'default'}
-        avatarSrc={`${ASSET_CDN}/web/chains/${chainId}.png`}
+        avatarSrc={avatarSrc}
         disabled={cannotChangeNetwork}
         text={
           isLoading ? (

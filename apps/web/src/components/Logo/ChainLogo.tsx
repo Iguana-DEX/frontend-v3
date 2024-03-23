@@ -12,7 +12,7 @@ export const ChainLogo = memo(
           <Image
             alt={`chain-${chainId}`}
             style={{ maxHeight: `${height}px` }}
-            src="etherlink_logo.png"
+            src="https://raw.githubusercontent.com/Iguana-DEX/assets/main/chains/etherlink.svg"
             width={width}
             height={height}
             unoptimized

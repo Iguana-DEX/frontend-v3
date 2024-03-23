@@ -40,8 +40,7 @@ export function getV3Subgraphs({ noderealApiKey }: SubgraphParams) {
     [ChainId.OPBNB]: `https://open-platform-ap.nodereal.io/${noderealApiKey}/opbnb-mainnet-graph-query/subgraphs/name/pancakeswap/exchange-v3`,
     [ChainId.OPBNB_TESTNET]: null,
     [ChainId.SCROLL_SEPOLIA]: 'https://api.studio.thegraph.com/query/45376/exchange-v3-scroll-sepolia/version/latest',
-    [ChainId.ETHERLINK_TESTNET]:
-      'https://api.studio.thegraph.com/query/45376/exchange-v3-scroll-sepolia/version/latest',
+    [ChainId.ETHERLINK_TESTNET]: null,
   } satisfies Record<ChainId, string | null>
 }
 

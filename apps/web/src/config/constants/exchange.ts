@@ -76,7 +76,7 @@ export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.BASE]: [baseTokens.usdc, baseTokens.weth],
   [ChainId.BASE_TESTNET]: [baseTestnetTokens.usdc, baseTestnetTokens.weth],
   [ChainId.SCROLL_SEPOLIA]: [scrollSepoliaTokens.usdc, scrollSepoliaTokens.weth],
-  [ChainId.ETHERLINK_TESTNET]: [etherlinkTestnetTokens.usdt],
+  [ChainId.ETHERLINK_TESTNET]: [etherlinkTestnetTokens.wxtz, etherlinkTestnetTokens.eusd],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
@@ -98,7 +98,13 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.BASE]: [baseTokens.usdc, baseTokens.weth],
   [ChainId.BASE_TESTNET]: [baseTestnetTokens.usdc, baseTestnetTokens.weth],
   [ChainId.SCROLL_SEPOLIA]: [scrollSepoliaTokens.usdc, scrollSepoliaTokens.weth],
-  [ChainId.ETHERLINK_TESTNET]: [etherlinkTestnetTokens.usdt],
+  [ChainId.ETHERLINK_TESTNET]: [
+    etherlinkTestnetTokens.wxtz,
+    etherlinkTestnetTokens.eusd,
+    etherlinkTestnetTokens.usdc,
+    etherlinkTestnetTokens.usdt,
+    etherlinkTestnetTokens.ign,
+  ],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
@@ -127,7 +133,11 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
   [ChainId.BASE]: [[baseTokens.usdc, baseTokens.weth]],
   [ChainId.BASE_TESTNET]: [[baseTestnetTokens.usdc, baseTestnetTokens.weth]],
   [ChainId.SCROLL_SEPOLIA]: [[scrollSepoliaTokens.usdc, scrollSepoliaTokens.weth]],
-  [ChainId.ETHERLINK_TESTNET]: [[etherlinkTestnetTokens.usdt, etherlinkTestnetTokens.usdc]],
+  [ChainId.ETHERLINK_TESTNET]: [
+    [etherlinkTestnetTokens.ign, etherlinkTestnetTokens.wxtz],
+    [etherlinkTestnetTokens.wxtz, etherlinkTestnetTokens.eusd],
+    [etherlinkTestnetTokens.usdt, etherlinkTestnetTokens.eusd],
+  ],
 }
 
 export const BIG_INT_ZERO = 0n
