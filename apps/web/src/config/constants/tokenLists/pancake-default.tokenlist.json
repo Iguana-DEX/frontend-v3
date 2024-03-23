@@ -480,7 +480,7 @@
       "address": "0xBeEfb119631691a1e0D9378fA7864fC6E67A72Ad",
       "chainId": 128123,
       "decimals": 18,
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/cake.png"
+      "logoURI": "https://raw.githubusercontent.com/Iguana-DEX/assets/main/iguana_brand_assets/token_logo.png"
     },
     {
       "name": "Iguana Token",
@@ -488,7 +488,7 @@
       "address": "0x6333657f8fd60593282213664ed25fFb88aB5A59",
       "chainId": 97,
       "decimals": 18,
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/cake.png"
+      "logoURI": "https://raw.githubusercontent.com/Iguana-DEX/assets/main/iguana_brand_assets/token_logo.png"
     },
     {
       "name": "Wrapped XTZ",
@@ -496,7 +496,15 @@
       "address": "0xB1Ea698633d57705e93b0E40c1077d46CD6A51d8",
       "chainId": 128123,
       "decimals": 18,
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/cake.png"
+      "logoURI": "https://assets.coingecko.com/coins/images/976/standard/Tezos-logo.png?1696502091"
+    },
+    {
+      "name": "Ethereum USD",
+      "symbol": "eUSD",
+      "address": "0x1A71f491fb0Ef77F13F8f6d2a927dd4C969ECe4f",
+      "chainId": 128123,
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/Iguana-DEX/assets/main/assets/0x221836a597948dce8f3568e044ff123108acc42a.png"
     },
     {
       "name": "Tether USD",
@@ -504,7 +512,31 @@
       "address": "0xD21B917D2f4a4a8E3D12892160BFFd8f4cd72d4F",
       "chainId": 128123,
       "decimals": 18,
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/cake.png"
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdt.png"
+    },
+    {
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "address": "0xa7c9092A5D2C3663B7C5F714dbA806d02d62B58a",
+      "chainId": 128123,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdc.png"
+    },
+    {
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "address": "0x8DEF68408Bc96553003094180E5C90d9fe5b88C1",
+      "chainId": 128123,
+      "decimals": 18,
+      "logoURI": "https://pancakeswap.finance/images/tokens/0x2170Ed0880ac9A755fd29B2688956BD959F933F8.png"
+    },
+    {
+      "name": "tzBTC",
+      "symbol": "tzBTC",
+      "address": "0x6bDE94725379334b469449f4CF49bCfc85ebFb27",
+      "chainId": 128123,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/wbtc.png"
     }
   ]
 }

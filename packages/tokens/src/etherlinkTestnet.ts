@@ -31,6 +31,12 @@ export const etherlinkTestnetTokens = {
     'IGN',
     'Iguana Token',
   ),
-  btc: new ERC20Token(ChainId.ETHERLINK_TESTNET, '0x6bDE94725379334b469449f4CF49bCfc85ebFb27', 18, 'BTC', 'Bitcoin'),
-  eth: new ERC20Token(ChainId.ETHERLINK_TESTNET, '0x8DEF68408Bc96553003094180E5C90d9fe5b88C1', 18, 'ETH', 'Ether'),
+  tzbtc: new ERC20Token(ChainId.ETHERLINK_TESTNET, '0x6bDE94725379334b469449f4CF49bCfc85ebFb27', 18, 'tzBTC', 'tzBTC'),
+  weth: new ERC20Token(
+    ChainId.ETHERLINK_TESTNET,
+    '0x8DEF68408Bc96553003094180E5C90d9fe5b88C1',
+    18,
+    'WETH',
+    'Wrapped Ether',
+  ),
 }

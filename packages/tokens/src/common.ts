@@ -248,10 +248,29 @@ export const eUSD = {
   ),
 }
 
+export const tzBTC = {
+  [ChainId.ETHERLINK_TESTNET]: new ERC20Token(
+    ChainId.ETHERLINK_TESTNET,
+    '0x6bDE94725379334b469449f4CF49bCfc85ebFb27',
+    18,
+    'tzBTC',
+    'tzBTC',
+    'https://tzbtc.io/',
+  ),
+}
+
 export const IGN = {
   [ChainId.ETHERLINK_TESTNET]: new ERC20Token(
     ChainId.ETHERLINK_TESTNET,
     '0xBeEfb119631691a1e0D9378fA7864fC6E67A72Ad',
+    18,
+    'IGN',
+    'Iguana Token',
+    'https://iguanadex.com/',
+  ),
+  [ChainId.BSC_TESTNET]: new ERC20Token(
+    ChainId.BSC_TESTNET,
+    '0x564a8549D204CfC598F528c01e9cC55D772123F5',
     18,
     'IGN',
     'Iguana Token',
@@ -341,6 +360,7 @@ export const USDT = {
     6,
     'USDT',
     'Tether USD',
+    'https://tether.to/',
   ),
   [ChainId.POLYGON_ZKEVM]: new ERC20Token(
     ChainId.POLYGON_ZKEVM,
@@ -348,6 +368,7 @@ export const USDT = {
     6,
     'USDT',
     'Tether USD',
+    'https://tether.to/',
   ),
   [ChainId.POLYGON_ZKEVM_TESTNET]: new ERC20Token(
     ChainId.POLYGON_ZKEVM_TESTNET,
@@ -384,6 +405,7 @@ export const USDT = {
     18,
     'USDT',
     'Tether USD',
+    'https://tether.to/',
   ),
 }
 
