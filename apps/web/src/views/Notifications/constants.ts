@@ -4,7 +4,7 @@ import {
   EventInformation,
   PancakeNotificationBuilders,
   ResponseEvents,
-  SubsctiptionType,
+  SubscriptionType,
   pushNotification,
 } from './types'
 
@@ -18,35 +18,35 @@ export const NotificationFilterTypes: OptionProps[] = [
   },
   {
     label: 'Lottery',
-    value: SubsctiptionType.Lottery,
+    value: SubscriptionType.Lottery,
   },
   {
     label: 'Prediction',
-    value: SubsctiptionType.Prediction,
+    value: SubscriptionType.Prediction,
   },
   {
     label: 'Liquidity',
-    value: SubsctiptionType.Liquidity,
+    value: SubscriptionType.Liquidity,
   },
   {
     label: 'Farm',
-    value: SubsctiptionType.Farms,
+    value: SubscriptionType.Farms,
   },
   {
     label: 'Prices',
-    value: SubsctiptionType.PriceUpdates,
+    value: SubscriptionType.PriceUpdates,
   },
   {
     label: 'Promotion',
-    value: SubsctiptionType.Promotional,
+    value: SubscriptionType.Promotional,
   },
   {
     label: 'Alerts',
-    value: SubsctiptionType.Alerts,
+    value: SubscriptionType.Alerts,
   },
   {
     label: 'Rewards',
-    value: SubsctiptionType.TradingReward,
+    value: SubscriptionType.TradingReward,
   },
   {
     label: 'Archived',
@@ -67,7 +67,7 @@ export const PancakeNotifications: {
       body: `New LP position successfully added. you will be notified on important updates.`,
       icon: `https://pancakeswap.finance/logo.png`,
       url: 'https://pancakeswap.finance',
-      type: SubsctiptionType.Liquidity,
+      type: SubscriptionType.Liquidity,
     }
     // ... add more as we create use cases
   },
@@ -102,7 +102,7 @@ export const Events: { [event in keyof typeof ResponseEvents]: EventInformation 
   },
   [ResponseEvents.Unsubscribed]: {
     title: 'Update',
-    message: () => 'You sucessfully unsubsrcibed from notifications. You can re-subscribe any time',
+    message: () => 'You successfully unsubscribed from notifications. You can re-subscribe any time',
   },
 }
 
@@ -117,12 +117,12 @@ export const CHAIN_NAME_TO_CHAIN_ID = {
 }
 
 export const ENABLE_ALL_SCOPES = [
-  SubsctiptionType.Alerts,
-  SubsctiptionType.Farms,
-  SubsctiptionType.Liquidity,
-  SubsctiptionType.Lottery,
-  SubsctiptionType.Prediction,
-  SubsctiptionType.PriceUpdates,
-  SubsctiptionType.Promotional,
+  SubscriptionType.Alerts,
+  SubscriptionType.Farms,
+  SubscriptionType.Liquidity,
+  SubscriptionType.Lottery,
+  SubscriptionType.Prediction,
+  SubscriptionType.PriceUpdates,
+  SubscriptionType.Promotional,
 ]
-export const DISABLE_ALL_SCOPES = [SubsctiptionType.Alerts, SubsctiptionType.Liquidity]
+export const DISABLE_ALL_SCOPES = [SubscriptionType.Alerts, SubscriptionType.Liquidity]

@@ -1,24 +1,9 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Box, Flex, PageSection, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { Box, PageSection, useMatchBreakpoints } from '@pancakeswap/uikit'
 import useTheme from 'hooks/useTheme'
+import Image from 'next/image'
 import { styled } from 'styled-components'
-import MultipleBanner from './components/Banners/MultipleBanner'
-import CakeDataRow from './components/CakeDataRow'
-import CakeSection from './components/CakeSection'
-import CommunitySection from './components/CommunitySection'
-import { RightTopBox } from './components/CommunitySection/ImagesOnBg'
-import EcoSystemSection from './components/EcoSystemSection'
-import Footer from './components/Footer'
 import Hero from './components/Hero'
-import MetricsSection from './components/MetricsSection'
-import { NewsSection } from './components/NewsSection'
-import {
-  InnerWedgeWrapper,
-  OuterWedgeWrapper,
-  WedgeBottomRight,
-  WedgeTopLeft,
-  WedgeTopRight,
-} from './components/WedgeSvgs'
 
 const StyledHeroSection = styled(PageSection)`
   padding-top: 16px;
@@ -71,6 +56,13 @@ const Home: React.FC<React.PropsWithChildren> = () => {
           }
         `}
       </style>
+      <Image
+        src="https://raw.githubusercontent.com/Iguana-DEX/assets/main/iguana_brand_assets/bg-header.webp"
+        alt="Background image"
+        width={100}
+        height={100}
+        layout="responsive"
+      />
       <StyledHeroSection
         innerProps={{ style: { margin: '0', width: '100%', overflow: 'visible', padding: '16px' } }}
         containerProps={{
@@ -79,10 +71,10 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         index={2}
         hasCurvedDivider={false}
       >
-        <MultipleBanner />
+        {/* <EtherlinkBanner /> */}
         <Hero />
       </StyledHeroSection>
-      <PageSection
+      {/* <PageSection
         innerProps={{ style: { margin: '0', width: '100%' } }}
         containerProps={{
           id: 'home-2',
@@ -169,7 +161,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         hasCurvedDivider={false}
       >
         <Footer />
-      </PageSection>
+      </PageSection> */}
     </Box>
   )
 }

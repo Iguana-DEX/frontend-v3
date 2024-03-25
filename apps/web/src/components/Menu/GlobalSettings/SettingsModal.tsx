@@ -19,7 +19,6 @@ import {
   QuestionHelper,
   RowFixed,
   Text,
-  ThemeSwitcher,
   Toggle,
 } from '@pancakeswap/uikit'
 import {
@@ -34,7 +33,7 @@ import AccessRiskTooltips from 'components/AccessRisk/AccessRiskTooltips'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import useTheme from 'hooks/useTheme'
 import { useWebNotifications } from 'hooks/useWebNotifications'
-import { ReactNode, lazy, useCallback, useState, Suspense } from 'react'
+import { ReactNode, Suspense, lazy, useCallback, useState } from 'react'
 import { useSwapActionHandlers } from 'state/swap/useSwapActionHandlers'
 import { useSubgraphHealthIndicatorManager, useUserUsernameVisibility } from 'state/user/hooks'
 import { useUserTokenRisk } from 'state/user/hooks/useUserTokenRisk'
@@ -142,10 +141,10 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
           <>
             <Flex pb="24px" flexDirection="column">
               <PreTitle mb="24px">{t('Global')}</PreTitle>
-              <Flex justifyContent="space-between" mb="24px">
+              {/* <Flex justifyContent="space-between" mb="24px">
                 <Text>{t('Dark mode')}</Text>
                 <ThemeSwitcher isDark={isDark} toggleTheme={() => setTheme(isDark ? 'light' : 'dark')} />
-              </Flex>
+              </Flex> */}
               <Flex justifyContent="space-between" alignItems="center" mb="24px">
                 <Flex alignItems="center">
                   <Text>{t('Subgraph Health Indicator')}</Text>

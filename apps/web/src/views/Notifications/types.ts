@@ -19,7 +19,7 @@ enum ScopeIdsToName {
   TradingReward = 'e0a3aeb3-3ec2-496d-b6c7-343185de6aca',
 }
 
-export enum SubsctiptionType {
+export enum SubscriptionType {
   Lottery = ScopeIdsToName.Lottery,
   Prediction = ScopeIdsToName.Prediction,
   Liquidity = ScopeIdsToName.Liquidity,

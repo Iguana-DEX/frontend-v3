@@ -3,35 +3,35 @@ import { NotifyClientTypes } from '@walletconnect/notify-client'
 import Image from 'next/image'
 import { Dispatch, SetStateAction, useCallback } from 'react'
 import { NotificationContainerStyled } from 'views/Notifications/styles'
-import { Scope, SubsctiptionType } from 'views/Notifications/types'
+import { Scope, SubscriptionType } from 'views/Notifications/types'
 
 export const ScopeIcon: React.FC<
-  { scope: SubsctiptionType } & (React.SVGProps<SVGSVGElement> &
+  { scope: SubscriptionType } & (React.SVGProps<SVGSVGElement> &
     React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>)
 > = ({ scope }: any) => {
   const providerToLogo: { [key: string]: JSX.Element } = {
-    [SubsctiptionType.Alerts]: (
+    [SubscriptionType.Alerts]: (
       <Image src="/images/notifications/alerts-scope.svg" alt="alert-scope" width={40} height={40} />
     ),
-    [SubsctiptionType.Farms]: (
+    [SubscriptionType.Farms]: (
       <Image src="/images/notifications/farms-scope.svg" alt="farms-scope" width={40} height={40} />
     ),
-    [SubsctiptionType.Liquidity]: (
+    [SubscriptionType.Liquidity]: (
       <Image src="/images/notifications/liquidity-scope.svg" alt="liquidity-scope" width={40} height={40} />
     ),
-    [SubsctiptionType.Lottery]: (
+    [SubscriptionType.Lottery]: (
       <Image src="/images/notifications/lotto-scope.svg" alt="lottery-scope" width={40} height={40} />
     ),
-    [SubsctiptionType.Prediction]: (
+    [SubscriptionType.Prediction]: (
       <Image src="/images/notifications/predictions-scope.svg" alt="prediction-scope" width={40} height={40} />
     ),
-    [SubsctiptionType.PriceUpdates]: (
+    [SubscriptionType.PriceUpdates]: (
       <Image src="/images/notifications/price-updates-scope.svg" alt="prices-scope" width={40} height={40} />
     ),
-    [SubsctiptionType.Promotional]: (
+    [SubscriptionType.Promotional]: (
       <Image src="/images/notifications/promotional-scope.svg" alt="promo-scope" width={40} height={40} />
     ),
-    [SubsctiptionType.TradingReward]: (
+    [SubscriptionType.TradingReward]: (
       <Image src="/images/notifications/promotional-scope.svg" alt="promo-scope" width={40} height={40} />
     ),
   }
@@ -65,7 +65,7 @@ const Settingsitem = ({ scope, id, setScopes, index }: ISettingsprops) => {
   return (
     <Box paddingLeft="24px" paddingRight="16px" paddingBottom="16px">
       <FlexGap alignItems="center">
-        <ScopeIcon scope={id as SubsctiptionType} />
+        <ScopeIcon scope={id as SubscriptionType} />
         <Text fontWeight={600} paddingX="12px" fontSize="17px" textAlign="center" lineHeight="16px">
           {scope.name}
         </Text>

@@ -28,7 +28,7 @@ import {
   StyledLink,
   StyledNotificationWrapper,
 } from 'views/Notifications/styles'
-import { SubsctiptionType } from 'views/Notifications/types'
+import { SubscriptionType } from 'views/Notifications/types'
 import { formatTime } from 'views/Notifications/utils/date'
 import {
   extractChainIdFromMessage,
@@ -265,8 +265,8 @@ const NotificationContainer = ({
         .filter((notification: NotifyClientTypes.NotifyMessageRecord) => {
           if (importantAlertsOnly)
             return (
-              notification.message.type === SubsctiptionType.Alerts ||
-              notification.message.type === SubsctiptionType.Liquidity
+              notification.message.type === SubscriptionType.Alerts ||
+              notification.message.type === SubscriptionType.Liquidity
             )
           return true
         })

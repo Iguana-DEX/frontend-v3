@@ -177,8 +177,8 @@ const useTradeBlockData = () => {
         path: '/swap',
       },
       {
-        title: t('Liquidity'),
-        description: t('Fund liquidity pools, earn trading fees'),
+        title: t('Liquidity Pools'),
+        description: t('Deposit liquidity in pools to earn trading fees'),
         ctaTitle: t('Add Now'),
         image: `${ASSET_CDN}/web/landing/trade-liquidity.png`,
         defaultImage: `${ASSET_CDN}/web/landing/trade-liquidity-purple.png`,
@@ -190,10 +190,10 @@ const useTradeBlockData = () => {
         ctaTitle: t('Bridge Now'),
         image: `${ASSET_CDN}/web/landing/trade-bridge.png`,
         defaultImage: `${ASSET_CDN}/web/landing/trade-bridge-purple.png`,
-        path: 'https://bridge.pancakeswap.finance/',
+        path: 'https://bridge.etherlink.com/',
       },
       {
-        title: t('Perpetual'),
+        title: t('Perpetuals'),
         description: t('Trade endlessly without expiration dates'),
         ctaTitle: t('Trade Now'),
         image: `${ASSET_CDN}/web/landing/trade-perpetual.png`,

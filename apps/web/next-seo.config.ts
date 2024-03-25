@@ -10,8 +10,8 @@ export const SEO: DefaultSeoProps = {
     site: '@IguanaDEX',
   },
   openGraph: {
-    title: '🦎 IguanaDEX - Trade, save and discover new horizons',
+    title: '🦎 IguanaDEX - Trade, earn and discover new horizons',
     description: 'Crypto trading made simple',
-    images: [{ url: 'https://assets.pancakeswap.finance/web/og/v2/hero.jpg' }],
+    images: [{ url: 'https://raw.githubusercontent.com/Iguana-DEX/assets/main/iguana_brand_assets/hero.jpg' }],
   },
 }

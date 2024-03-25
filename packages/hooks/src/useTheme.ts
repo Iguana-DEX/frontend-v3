@@ -1,10 +1,10 @@
-import { useContext, useCallback, useMemo } from 'react'
 import Cookie from 'js-cookie'
-import { ThemeContext as StyledThemeContext } from 'styled-components'
 import { useTheme as useNextTheme } from 'next-themes'
+import { useCallback, useContext, useMemo } from 'react'
+import { ThemeContext as StyledThemeContext } from 'styled-components'
 
 export const COOKIE_THEME_KEY = 'theme'
-export const THEME_DOMAIN = '.pancakeswap.finance'
+export const THEME_DOMAIN = '.iguanadex.com'
 
 const useTheme = () => {
   const { resolvedTheme, setTheme } = useNextTheme()
@@ -13,7 +13,7 @@ const useTheme = () => {
   const handleSwitchTheme = useCallback(
     (themeValue: 'light' | 'dark') => {
       try {
-        setTheme(themeValue)
+        setTheme('dark') // Changed by Styliann - this effectively forces Dark Mode by default
         Cookie.set(COOKIE_THEME_KEY, themeValue, { domain: THEME_DOMAIN })
       } catch (err) {
         // ignore set cookie error for perp theme

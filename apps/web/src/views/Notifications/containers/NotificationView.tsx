@@ -28,7 +28,7 @@ import { NotificationFilterTypes } from 'views/Notifications/constants'
 import { NotificationContainerStyled } from 'views/Notifications/styles'
 import { NotificationHeader } from '../components/NotificationHeader/NotificationHeader'
 import NotificationItem from '../components/NotificationItem/NotificationItem'
-import { SubsctiptionType } from '../types'
+import { SubscriptionType } from '../types'
 
 const Wrapper = styled.div`
   display: flex;
@@ -104,7 +104,7 @@ const NotificationView = ({
 
   const filteredNotifications = useMemo(() => {
     const typeFilter = (
-      subscriptionType: SubsctiptionType,
+      subscriptionType: SubscriptionType,
       unFilteredNotifications: NotifyClientTypes.NotifyMessageRecord[],
     ) => {
       return unFilteredNotifications.filter((notification: NotifyClientTypes.NotifyMessageRecord) => {
@@ -113,32 +113,32 @@ const NotificationView = ({
       })
     }
     const typeFilterLP = (
-      subscriptionType: SubsctiptionType,
+      subscriptionType: SubscriptionType,
       unFilteredNotifications: NotifyClientTypes.NotifyMessageRecord[],
     ) => {
       return unFilteredNotifications.filter((notification: NotifyClientTypes.NotifyMessageRecord) => {
-        const extractedType = [notification.message.type, SubsctiptionType.Liquidity]
+        const extractedType = [notification.message.type, SubscriptionType.Liquidity]
         return extractedType.includes(subscriptionType)
       })
     }
     const sortNotifications = (unFilteredNotifications: NotifyClientTypes.NotifyMessageRecord[]) => {
       switch (notificationType) {
-        case SubsctiptionType.Lottery:
-          return typeFilter(SubsctiptionType.Lottery, unFilteredNotifications)
-        case SubsctiptionType.Prediction:
-          return typeFilter(SubsctiptionType.Prediction, unFilteredNotifications)
-        case SubsctiptionType.Liquidity:
-          return typeFilter(SubsctiptionType.Liquidity, unFilteredNotifications)
-        case SubsctiptionType.Farms:
-          return typeFilter(SubsctiptionType.Farms, unFilteredNotifications)
-        case SubsctiptionType.PriceUpdates:
-          return typeFilter(SubsctiptionType.PriceUpdates, unFilteredNotifications)
-        case SubsctiptionType.Promotional:
-          return typeFilter(SubsctiptionType.Promotional, unFilteredNotifications)
-        case SubsctiptionType.Alerts:
-          return typeFilterLP(SubsctiptionType.Alerts, unFilteredNotifications)
-        case SubsctiptionType.TradingReward:
-          return typeFilter(SubsctiptionType.TradingReward, unFilteredNotifications)
+        case SubscriptionType.Lottery:
+          return typeFilter(SubscriptionType.Lottery, unFilteredNotifications)
+        case SubscriptionType.Prediction:
+          return typeFilter(SubscriptionType.Prediction, unFilteredNotifications)
+        case SubscriptionType.Liquidity:
+          return typeFilter(SubscriptionType.Liquidity, unFilteredNotifications)
+        case SubscriptionType.Farms:
+          return typeFilter(SubscriptionType.Farms, unFilteredNotifications)
+        case SubscriptionType.PriceUpdates:
+          return typeFilter(SubscriptionType.PriceUpdates, unFilteredNotifications)
+        case SubscriptionType.Promotional:
+          return typeFilter(SubscriptionType.Promotional, unFilteredNotifications)
+        case SubscriptionType.Alerts:
+          return typeFilterLP(SubscriptionType.Alerts, unFilteredNotifications)
+        case SubscriptionType.TradingReward:
+          return typeFilter(SubscriptionType.TradingReward, unFilteredNotifications)
         default:
           return unFilteredNotifications
       }

@@ -48,12 +48,8 @@ const config: (
           label: t('Swap'),
           href: '/swap',
         },
-        {
-          label: t('Liquidity'),
-          href: '/liquidity',
-        },
         // {
-        //   label: t('Perpetual'),
+        //   label: t('Perpetuals'),
         //   href: getPerpetualUrl({
         //     chainId,
         //     languageCode,
@@ -102,7 +98,7 @@ const config: (
       supportChainIds: SUPPORT_FARMS,
       items: [
         {
-          label: t('Liquidity'),
+          label: t('Liquidity Pools'),
           href: '/liquidity',
         },
         {

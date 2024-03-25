@@ -75,6 +75,11 @@ const config = {
         hostname: 'static-nft.pancakeswap.com',
         pathname: '/mainnet/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+        pathname: '/Iguana-DEX/assets/main/**',
+      },
     ],
   },
   async rewrites() {

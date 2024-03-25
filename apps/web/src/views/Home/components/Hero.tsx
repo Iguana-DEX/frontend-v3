@@ -5,6 +5,7 @@ import { NextLinkFromReactRouter } from '@pancakeswap/widgets-internal'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import { ASSET_CDN } from 'config/constants/endpoints'
 import useTheme from 'hooks/useTheme'
+import Image from 'next/image'
 import { useLayoutEffect, useRef } from 'react'
 import { styled } from 'styled-components'
 import { useAccount } from 'wagmi'
@@ -218,7 +219,7 @@ const Hero = () => {
         <Flex flex="1" flexDirection="column">
           <Text textAlign={isMobile || isMd ? 'center' : 'left'} pr={isMobile ? 0 : '10px'} mb="16px">
             <StyledText display="inline-block" lineHeight="110%" fontWeight={600} color="text" mr="8px">
-              {t("Everyone's")}
+              {t('The')}
             </StyledText>
             <StyledText
               display="inline-block"
@@ -227,7 +228,7 @@ const Hero = () => {
               color="secondary"
               mr={isMobile ? 0 : '8px'}
             >
-              {t('Favorite')}
+              {t('All-In-One')}
             </StyledText>
             {isMobile && <br />}
             <StyledText display="inline-block" lineHeight="110%" fontWeight={600} color="text">
@@ -243,7 +244,7 @@ const Hero = () => {
             lineHeight="110%"
             fontWeight={600}
           >
-            {t('Trade, earn, and own crypto on the all-in-one multichain DEX')}
+            {t('Trade Spot, NFTs and Perpetual Swaps')}
           </Text>
 
           <Flex justifyContent={isMobile || isMd ? 'center' : 'start'}>
@@ -275,26 +276,16 @@ const Hero = () => {
                 ref={canvasRef}
               />
               {!(isIOS || isMobile) && (
-                <VideoWrapper>
-                  <CakeVideo ref={videoRef} width={width} autoPlay muted playsInline>
-                    <source src={`${ASSET_CDN}/web/landing/bunnyv2.webm`} type="video/webm" />
-                  </CakeVideo>
-                  <CakeVideo ref={starVideoRef} width={width} autoPlay loop muted playsInline>
-                    <source src={`${ASSET_CDN}/web/landing/star.webm`} type="video/webm" />
-                  </CakeVideo>
-                  <CakeVideo ref={cakeVideoRef} width={width} autoPlay loop muted playsInline>
-                    <source src={`${ASSET_CDN}/web/landing/hero-cake.webm`} type="video/webm" />
-                  </CakeVideo>
-                  <CakeVideo ref={rock01VideoRef} width={width} autoPlay loop muted playsInline>
-                    <source src={`${ASSET_CDN}/web/landing/rock01.webm`} type="video/webm" />
-                  </CakeVideo>
-                  <CakeVideo ref={rock02VideoRef} width={width} autoPlay loop muted playsInline>
-                    <source src={`${ASSET_CDN}/web/landing/rock02.webm`} type="video/webm" />
-                  </CakeVideo>
-                  <CakeVideo ref={rock03VideoRef} width={width} autoPlay loop muted playsInline>
-                    <source src={`${ASSET_CDN}/web/landing/rock03.webm`} type="video/webm" />
-                  </CakeVideo>
-                </VideoWrapper>
+                <div>
+                  <Image
+                    src="https://raw.githubusercontent.com/Iguana-DEX/assets/main/iguana_brand_assets/Iguana_on_branch.webp"
+                    alt="iguana on branch"
+                    style={{ position: 'absolute', top: 130, left: 150, width: 400, height: 300 }}
+                    width={400}
+                    height={400}
+                    background-color={theme.isDark ? '#B8ADD2' : '#7A6EAA'}
+                  />
+                </div>
               )}
             </CakeBox>
           </BunnyWrapper>

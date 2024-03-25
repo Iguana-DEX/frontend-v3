@@ -1,14 +1,13 @@
-import memoize from 'lodash/memoize'
 import { ContextApi } from '@pancakeswap/localization'
-import { PageMeta } from './types'
+import memoize from 'lodash/memoize'
 import { ASSET_CDN } from './endpoints'
+import { PageMeta } from './types'
 
 export const DEFAULT_META: PageMeta = {
   title: 'PancakeSwap',
   description: 'Trade, earn, and own crypto on the all-in-one multichain DEX',
-  image: `${ASSET_CDN}/web/og/hero.jpg`,
+  image: `https://raw.githubusercontent.com/Iguana-DEX/assets/main/iguana_brand_assets/hero.jpg`,
 }
-
 interface PathList {
   paths: { [path: string]: { title: string; basePath?: boolean; description?: string; image?: string } }
   defaultTitleSuffix: string

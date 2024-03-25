@@ -1,6 +1,6 @@
 import { ChainId } from '@pancakeswap/chains'
 
-const PRICE_API = 'https://api.binance.com/api/v3/ticker/price'
+const PRICE_API = 'https://alpha.wallet-api.pancakeswap.com/v1/prices/list/'
 
 const zeroAddress = '0x0000000000000000000000000000000000000000' as const
 
@@ -48,47 +48,13 @@ function getRequestUrl(params?: CurrencyParams | CurrencyParams[]): string | und
   if (!params) {
     return undefined
   }
-
   const infoList = Array.isArray(params) ? params : [params]
-
-  console.log(infoList)
-
-  let symbolString
-
-  if (infoList.length > 1) {
-    symbolString = '?symbols=['
-    for (const tokenInfo in infoList) {
-      if (tokenInfo.symbol === 'tXTZ') {
-        symbolString += `"XTZUSDT",`
-      } else if (tokenInfo.symbol === 'tzBTC') {
-        symbolString += `"BTCUSDT",`
-      } else if (tokenInfo.symbol === 'WETH') {
-        symbolString += `"ETHUSDT",`
-      } else {
-        symbolString += `"${tokenInfo.symbol}USDT",`
-      }
-    }
-    symbolString = `${symbolString.slice(0, -1)}]` // remove last comma
-  } else {
-    symbolString = '?symbol='
-    if (infoList[0].symbol === 'tXTZ') {
-      symbolString += `XTZUSDT`
-    } else if (infoList[0].symbol === 'tzBTC') {
-      symbolString += `BTCUSDT`
-    } else if (infoList[0].symbol === 'WETH') {
-      symbolString += `ETHUSDT`
-    } else {
-      symbolString += `${infoList[0].symbol}USDT`
-    }
+  const key = getCurrencyListKey(infoList)
+  if (!key) {
+    return undefined
   }
-
-  const encodedKey = encodeURIComponent(`${PRICE_API}${symbolString}`)
-
-  const test = `${PRICE_API}${symbolString}`
-
-  console.log(test)
-
-  return encodedKey
+  const encodedKey = encodeURIComponent(key)
+  return `${PRICE_API}${encodedKey}`
 }
 
 export async function getCurrencyUsdPrice(currencyParams?: CurrencyParams) {
