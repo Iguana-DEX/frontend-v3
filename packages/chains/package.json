@@ -35,7 +35,7 @@
     "update:snapshot": "vitest -u"
   },
   "engines": {
-    "node": ">=10"
+    "node": "18.x"
   },
   "devDependencies": {
     "tsup": "^6.7.0"
